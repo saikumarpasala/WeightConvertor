@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, intial=scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href=""><style>
+		body{
+			margin-top:70px;
+			background:#333;
+			color:#ffff;
+		}
+	</style>
+	<title>Weight Converter</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h1 class="display-4 text-center mb-3">Weight Converter</h1>
+				<form>
+					<div form-group>
+						<input type="text" clasS ="form-control-lg" placeholder="Enter pounds...">
+					</div>
+				</form>
+				<div id="output">
+					<div class="card card-primary mb-2">
+						<div class="card-block">
+						<h4>Grams:</h4>
+						<div id="gramsoutput"></div>
+							
+						</div>	
+							
+							<div class="card card-success mb-2">
+						<div class="card-block">
+						<h4>Kilograms:</h4>
+						<div id="KgOutput"></div>
+							
+						</div>	
+							
+							<div class="card card-danger mb-2">
+						<div class="card-block">
+						<h4>Ounces:</h4>
+						<div id="ozOutput"></div>	
+							
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<script>
+		document.getElementById('output').style.visibility = 'hidden';
+		document.grtElementById('IbsInput').addEventlistener('input',funtion(e){
+			let lbs = e.target.value;
+	document.getElementById('gramsoutput').innerHTML = lbs/0.0022046;
+		document.getElementById('kgoutput').innerHTML = lbs/2.2046;
+			document.getElementById('ozoutput').innerHTML = lbs*16;
+           });
+	</script>
+
+</body>
+</html>
